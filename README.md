@@ -3,6 +3,21 @@
 
 This repository contains an automation test for AliExpress implemented using **Playwright with JavaScript**.
 
+## Environment & Versions
+
+| Tool / Dependency | Version  |
+|-------------------|----------|
+| Node.js           | v20.11.1 | 
+| Playwright        | 1.48.0   | 
+| NPM               | 10.2.4   | 
+| JavaScript        | ES2023   | 
+
+You can verify your local versions using:
+```bash
+node -v
+npx playwright --version
+npm -v
+
 
 ## Project Overview
 
