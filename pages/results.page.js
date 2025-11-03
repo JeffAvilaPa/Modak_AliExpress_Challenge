@@ -1,13 +1,13 @@
-import { expect } from '@playwright/test';
-
 export class ResultsPage {
     constructor(page) {
         this.page = page;
-        this.items = page.locator('#card-list');
+        this.itemsContainer = page.locator('#card-list');
+        this.itemCards = this.itemsContainer.locator('.hs_bu.search-item-card-wrapper-gallery');
     }
 
-    async isSecondItemAvailable() {
-        const secondItem = this.items.nth(1);
-        return await secondItem.isVisible();
+    async getNumberOfItems() {
+        const count = await this.itemCards.count();
+        console.log(`Number of items displayed on the first page: ${count}`);
+        return count;
     }
 }
